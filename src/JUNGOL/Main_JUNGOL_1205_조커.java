@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main_JUNGOL_1205_조커 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
+		System.out.println();
 		int N = sc.nextInt(); // 카드 개수
 		int card[] = new int[N];
 		int cnt0 = 0;

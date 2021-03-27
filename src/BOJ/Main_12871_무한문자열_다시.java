@@ -16,14 +16,14 @@ public class Main_12871_무한문자열_다시 {
         } //무조건 t 문자열이 길게
 
         int cnt = s.length() * t.length();
-        String T=t;
-                String S=s;
+        String T = t;
+        String S = s;
         if (s.length() != cnt) {
-            for (int i = 0; i < (cnt / t.length()-1); i++) {
-                T+=t;
+            for (int i = 0; i < (cnt / t.length() - 1); i++) {
+                T += t;
             }
-            for (int i = 0; i < (cnt / s.length()-1); i++) {
-                S+= s;
+            for (int i = 0; i < (cnt / s.length() - 1); i++) {
+                S += s;
             }
         }
         if (S.equals(T)) {

@@ -1,2 +1,2 @@
 # Algorithm_Note
-문제풀기
+✓문제풀기

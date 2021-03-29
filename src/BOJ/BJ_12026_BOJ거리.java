@@ -12,7 +12,7 @@ public class BJ_12026_BOJ거리 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         String str = br.readLine();
-        //k칸만큼 점프를 하는데 필요한 에너지의 양 k*k
+        //k칸만큼 점프를 하는데 필요한 에너지의 양 k*k f
         char map[] = new char[str.length()];
         for (int i = 0; i < str.length(); i++)
             map[i] = str.charAt(i);

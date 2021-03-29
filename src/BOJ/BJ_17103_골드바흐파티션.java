@@ -1,36 +1,44 @@
 package BOJ;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class BJ_17103_골드바흐파티션 {
-    public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
 
-        int T =sc.nextInt();
-        for (int test_case = 1; test_case <=T ; test_case++) {
+        int T = sc.nextInt();
+        ArrayList<Integer> prime = new ArrayList<>();
 
-            int N =sc.nextInt();
-            boolean check[]=new boolean[N+1];
-            int value[]=new int[N+1];
-            check[1]=true;
+        boolean[] check = new boolean[1000001];
 
+        // 소수 구하기.
+        check[0] = check[1] = true; // 0과 1은 true 로 시작
 
-            for (int i = 2; i <=Math.sqrt(N) ; i++) {
-                for (int j = 2; i*j <=N ; j++) {
-                    check[j*i]=true;
+        for (int i = 2; i < 1000001; i++) {
+            if (check[i] == false) {
+                prime.add(i);
+                for (int j = i + i; j < 1000001; j += i)
+                    check[j] = true;
+            }
+        }
+
+        // N/2까지만 탐색하는 방법.
+        while (T-- > 0) {
+            int N = sc.nextInt();
+            int result = 0;
+            for (int i = 0; prime.get(i) <= N / 2; i++) {
+                // 골드바흐가 맞다면
+                if (check[N - prime.get(i)] == false) {
+                    result++;
                 }
             }
-            for (int i = 2; i <=N ; i++) {
-                if(!check[i]){
-                    for (int j = 0; j <N; j++) {
-                        value[j]=i;
-                    }
-                }
-            } // N보다 작은 소수들만 저장
+            System.out.println(result);
+        }
 
-            System.out.println(Arrays.toString(value));
-
-        } // end of tc
     }// end of main
 } // end of class

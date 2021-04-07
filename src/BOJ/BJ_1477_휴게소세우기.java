@@ -42,14 +42,14 @@ public class BJ_1477_휴게소세우기 {
         while (left <= right) {
             int mid = (left + right) / 2;
             int sum = 0;
-            for (int i = 1; i < N + 2; i++)
+            for (int i = 1; i < N + 2; i++) {
                 // 휴게소 사이 거리가 mid라고 했을때 현재 세워진 휴게소 사이에 새로 끼워 넣을 수 있는 휴게소
                 sum += (rest[i] - rest[i - 1] - 1) / mid;
-
-               //현재 mid의 거리 차이가 가능하다면 => 최대값을 찾기 위해 더 넓은 범위 탐색
-                if (sum > M) left = mid + 1;
+            } //사이 공백 반 합
+            //현재 mid의 거리 차이가 가능하다면 => 최대값을 찾기 위해 더 넓은 범위 탐색
+            if (sum > M) left = mid + 1;
                 //더 적게 세워야하면 간격 줄임
-                else right = mid - 1;
+            else right = mid - 1;
         }
     }
 } // end of class

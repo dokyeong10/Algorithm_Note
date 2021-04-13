@@ -71,9 +71,7 @@ public class BJ_18405_경쟁적전염 {
 
     } // end of main
 
-    private static void bfs() {
-        q.offer(new Point(0, 0));
-    }
+
     static class Point {
         int r, c, num;
 

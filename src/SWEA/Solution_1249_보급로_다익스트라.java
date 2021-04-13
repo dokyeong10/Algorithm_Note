@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class Solution_1249_보급로_유튭_우선순위큐 {
+public class Solution_1249_보급로_다익스트라 {
     static int N, INF = Integer.MAX_VALUE;
     static int map[][];
     static int dr[] = {-1, 1, 0, 0};
@@ -51,16 +51,8 @@ public class Solution_1249_보급로_유튭_우선순위큐 {
                 minTime[i][j] = INF; // 엄청 큰수로 다 채워넣은거임
             }
         }
-        PriorityQueue<int[]> queue = new PriorityQueue<int[]>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                return o1[2] - o2[2];
-            }
-        }); //정점 r[0],c[1] 출발지부터 복구시간[2]
-
 
         minTime[startR][startC] = 0;
-        queue.offer(new int[]{startR, startC, minTime[startR][startC]});
 
         int r = 0, c = 0, cost = 0, nr, nc;
         int[] current;
@@ -68,12 +60,17 @@ public class Solution_1249_보급로_유튭_우선순위큐 {
         while (true) {
             cost = INF;
             // 방문하지 않은 정점 중 출발지에서 자신으로 오는 비용이 최소인 정점 선택
-            current = queue.poll();
-            r = current[0];
-            c = current[1];
-            cost = current[2];
 
-            if (visited[r][c]) continue;
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    if (!visited[i][j] && cost > minTime[i][j]) {
+                        cost = minTime[i][j];
+                        r = i;
+                        c = j;
+                    }
+                }
+            } // 다익스트라 쓰려면 주석 지우고 위에 주석 처리 하기
+
 
             visited[r][c] = true;
             if (r == N - 1 && c == N - 1) return cost;
@@ -88,7 +85,6 @@ public class Solution_1249_보급로_유튭_우선순위큐 {
                 if (nr >= 0 && nc >= 0 && nr < N && nc < N
                         && !visited[nr][nc] && minTime[nr][nc] > cost + map[nr][nc]) {
                     minTime[nr][nc] = cost + map[nr][nc];
-                    queue.offer(new int[]{nr, nc, minTime[nr][nc]});
 
                 }
             }

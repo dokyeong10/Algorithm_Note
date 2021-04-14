@@ -32,9 +32,9 @@ public class BJ_18405_경쟁적전염 {
             }
         }
         st = new StringTokenizer(br.readLine(), " ");
-        S = Integer.parseInt(st.nextToken());
-        X = Integer.parseInt(st.nextToken());
-        Y = Integer.parseInt(st.nextToken());
+        S = Integer.parseInt(st.nextToken()); // 시간
+        X = Integer.parseInt(st.nextToken()); //원하는 행
+        Y = Integer.parseInt(st.nextToken()); // 원하는 열
 
         Collections.sort(viruslist, new Comparator<Point>() {
             @Override

@@ -3,11 +3,12 @@ package SWEA;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class SEWA_5656_벽돌_다른법 {
+public class SEWA_5656_벽돌_태희쌤3 {
 
     static class Point {
         int r, c, cnt;
@@ -42,7 +43,7 @@ public class SEWA_5656_벽돌_다른법 {
                 }
             }
             min = Integer.MAX_VALUE;
-            go(0,map); //구슬 떨어뜨리기
+            go(0, map); //구슬 떨어뜨리기
             System.out.println("#" + test_case + " " + min);
 
 
@@ -50,26 +51,23 @@ public class SEWA_5656_벽돌_다른법 {
     }// end of main
 
     //중복순열로 구슬 떨어뜨리기
-    //boolean : true - 모두 깨뜨린 상황
-    private static boolean go(int cnt, int[][] map) { //cnt : 구슬을 떨어드린 횟수, map : cnt-1 구슬까지의 상태맵
-        int result =getRemain(map);
-        if(result==0){ //모두 빈칸(깨뜨릴 벽돌이 없다 )
-            min =0;
-            return true;
-        }
-        if(cnt ==N){
-            min = Math.min(min,result);
-            return false;
+    private static void go(int cnt, int[][] map) { //cnt : 구슬을 떨어드린 횟수, map : cnt-1 구슬까지의 상태맵
+
+        if (cnt == N) {
+            int result = getRemain(map);
+            min = Math.min(min, result);
+            return;
         }
 
         int[][] newMap = new int[H][W];
-        //매열마다 구슬 떨어뜨리는 시도
+
+        //매열마다 구슬 떨어뜨리는 시도 
         for (int c = 0; c < W; c++) {
             // 해당열에 구슬을 떨어뜨려 맞는 벽돌 찾기
             int r = 0;
             while (r < H && map[r][c] == 0) ++r;
             if (r == H) { //맞는 벽돌 없음 (모두 빈칸)
-             continue; // 다음 열로 구슬 떨어뜨리기
+                go(cnt + 1, map);
 
             } else {
                 // 기존 cnt-1 구슬까지의 상태로 초기화
@@ -79,44 +77,39 @@ public class SEWA_5656_벽돌_다른법 {
                 // 벽돌 내리기 (깨지고 난 빈 공간 처리)
                 down(newMap);
                 //다음 구슬 던지기
-               if(go(cnt + 1, newMap)) return true;
+                go(cnt + 1, newMap);
             }
         }
-        return false;
     }
 
     private static int getRemain(int[][] map) {
-        int count =0;
+        int count = 0;
         for (int i = 0; i < H; i++) {
             for (int j = 0; j < W; j++) {
-                if(map[i][j]>0) ++count;
+                if (map[i][j] > 0) ++count;
             }
         }
         return count;
     }
 
-    private static void down(int[][]map) {
+    private static ArrayList<Integer> list = new ArrayList<Integer>();
+
+    private static void down(int[][] map) {
         for (int c = 0; c < W; c++) {
-            int r =H-1;
-            while(r>=0&&map[r][c]==0)--r;
-            if(r<0)continue;
-
-            r=H-1;
-            while(r>0){// 자신의 위치에 내리기
-                if(map[r][c]==0){
-                    int nr =r-1;
-                    while(nr>0&&map[nr][c]==0)--nr;
-                    map[r][c]=map[nr][c];
-                    map[nr][c]=0;
-
+            for (int r = H - 1; r >= 0; r--) {
+                if (map[r][c] > 0) { //벽돌 이면
+                    list.add(map[r][c]);
+                    map[r][c] = 0;
                 }
-                --r;
-
+            } // 벽돌 리스트에 넣기
+            int r = H;
+            for (int b : list) { //리스트에 담긴 벽돌 차례대로 꺼내어 맨 아래행부터 채우기
+                map[--r][c] = b;
             }
-
+            list.clear();
         }
-
     }
+
 
     private static void boom(int[][] map, int r, int c) {
         Queue<Point> queue = new LinkedList<Point>();

@@ -3,7 +3,7 @@ package BOJ;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BJ_2239_스도쿠 {
+public class Main_백준_2239_스도쿠_오도경 {
     static int[][] sudo;
 
     public static void main(String[] args) {
@@ -80,9 +80,7 @@ public class BJ_2239_스도쿠 {
                 }
             }
         }
-
-
         return true;
-    }
+    } // end of Method(Posibility)
 
 } // end of class

@@ -29,10 +29,10 @@ public class Solution_SWEA_3238_이항계수구하기_오도경 {
             long R = Long.parseLong(st.nextToken());
             long M = Integer.parseInt(st.nextToken());
 
-            long[] fn = new long[(int) M];
-            fn[0] = 1;
+            long[] fac = new long[(int) M];
+            fac[0] = 1;
             for (int i = 1; i < M; i++)
-                fn[i] = (fn[i - 1] * i) % M;
+                fac[i] = (fac[i - 1] * i) % M;
 
             long res = 1L;
             while(N > 0 || R > 0){
@@ -40,8 +40,8 @@ public class Solution_SWEA_3238_이항계수구하기_오도경 {
                 long r = R % M;
                 if(n < r) res = 0L;
                 if(res == 0L) break;
-                res = (res * fn[(int) n]) % M;
-                res = (res * fast_mul((fn[(int) r] * fn[(int) (n - r)]) % M, M - 2, M)) % M;
+                res = (res * fac[(int) n]) % M;
+                res = (res * fast_mul((fac[(int) r] * fac[(int) (n - r)]) % M, M - 2, M)) % M;
                 N /= M;
                 R /= M;
             }

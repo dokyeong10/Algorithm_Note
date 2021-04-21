@@ -1,7 +1,6 @@
 package BOJ;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,9 +8,9 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class BJ_17135_캐슬디펜스 {
-    public static StringTokenizer stk;
+    public static StringTokenizer st;
     public static StringBuilder sb = new StringBuilder();
-    public static int[] dx = {0, -1, 0};
+    public static int[] dx = {0, -1, 0}; // 좌 하 우
     public static int[] dy = {-1, 0, 1};
     public static int n, m, d, ans = 0;
     public static boolean[] used;   //nCr 구할 때 사용하는 배열
@@ -19,19 +18,19 @@ public class BJ_17135_캐슬디펜스 {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        stk = new StringTokenizer(br.readLine());
-        n = Integer.parseInt(stk.nextToken());
-        m = Integer.parseInt(stk.nextToken());
-        d = Integer.parseInt(stk.nextToken());
-        map = new int[n + 1][m];
+        st = new StringTokenizer(br.readLine());
+        n = Integer.parseInt(st.nextToken()); // 행
+        m = Integer.parseInt(st.nextToken()); // 열
+        d = Integer.parseInt(st.nextToken()); // 거리
+        map = new int[n + 1][m]; // 격자 배열 + 성
         used = new boolean[m];
         for (int i = 0; i < n; i++) {
-            stk = new StringTokenizer(br.readLine());
+            st = new StringTokenizer(br.readLine());
             for (int j = 0; j < m; j++) {
-                map[i][j] = Integer.parseInt(stk.nextToken());
+                map[i][j] = Integer.parseInt(st.nextToken());
             }
-        }
-        nCr(0, 0);
+        } // 입력 받기 완료
+        nCr(0, 0); // 조합 이용 ( 궁수 자리 )
         System.out.println(ans);
     }
 

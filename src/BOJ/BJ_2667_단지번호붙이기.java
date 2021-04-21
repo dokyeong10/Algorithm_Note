@@ -17,7 +17,7 @@ public class BJ_2667_단지번호붙이기 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        N = Integer.parseInt(br.readLine());
+        N = Integer.parseInt(br.readLine()); // 지도크기
         apt = new int[N][N]; // 배열
         visited = new boolean[N][N]; // 중복 체크
         totalnum = 0; // 단지 개수
@@ -38,7 +38,7 @@ public class BJ_2667_단지번호붙이기 {
         }
         System.out.println(totalnum); // 단지 수
         Collections.sort(result); // 각 단지 수 정렬
-        for (int num1 : result) {
+        for (int num1 : result) { // 오름 차순 출력
             System.out.println(num1);
         }
 

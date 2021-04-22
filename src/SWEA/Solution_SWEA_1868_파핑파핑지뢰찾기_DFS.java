@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Solution_SWEA_1868_파핑파핑지뢰찾기_오도경1 {
+public class Solution_SWEA_1868_파핑파핑지뢰찾기_DFS {
 
     static int N, bomb[][];
     static char[][] map;
@@ -50,7 +50,7 @@ public class Solution_SWEA_1868_파핑파핑지뢰찾기_오도경1 {
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
                     if (bomb[i][j] == 0 && map[i][j] != '*') {
-                        bfs(i, j);
+                        dfs(i, j);
                         result++;
                     }
                 }
@@ -69,28 +69,21 @@ public class Solution_SWEA_1868_파핑파핑지뢰찾기_오도경1 {
 
     } // end of main
 
-    private static void bfs(int r, int c) {
-        Queue<Point> q = new LinkedList<>();
-        q.offer(new Point(r, c));
+    private static void dfs(int r, int c) {
+        int cur = bomb[r][c];
         bomb[r][c] = -1;
 
-        while (!q.isEmpty()) {
-            Point cur = q.poll();
-
-            int nr, nc;
+        if (cur == 0) {
             for (int d = 0; d < 8; d++) {
-                nr = cur.r + dr[d];
-                nc = cur.c + dc[d];
+                int nr = r + dr[d];
+                int nc = c + dc[d];
+                if (nr < 0 || nc < 0 || nr > N - 1 || nc > N - 1 || bomb[nr][nc] == -1 || map[nr][nc] == '*') continue;
+                dfs(nr, nc);
 
-                if (nr < 0 || nc < 0 || nr > N - 1 || nc > N - 1) continue;
-                if (map[nr][nc] == '*') continue;
-
-                if (bomb[nr][nc] == 0) {
-                    q.offer(new Point(nr, nc));
-                }
-                bomb[nr][nc] = -1;
             }
         }
+
+
     } // end of bfs
 
     static class Point {

@@ -7,8 +7,6 @@ public class BJ_16987_계란으로계란치기 {
     static int N, answer;
     static Egg[] egg;
 
-
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

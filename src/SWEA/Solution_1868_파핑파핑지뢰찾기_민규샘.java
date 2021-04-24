@@ -85,7 +85,7 @@ public class Solution_1868_파핑파핑지뢰찾기_민규샘 {
                 int nc = c + dc[i];
                 if (visited[nr][nc]) continue; // 방문했으면 그만
                 // 0이 아니면 방문체크만 하기
-                // 0이면 방문체크하고 큐에 넣기
+                // 0이면 방문체크하고 큐에 넣기 기기
                 visited[nr][nc] = true;
                 if (cnt[nr][nc] == 0) {
                     q.offer(new int[]{nr, nc});

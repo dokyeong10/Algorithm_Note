@@ -19,7 +19,7 @@ public class SWEA_1289_원재의메모리복구하기 {
             for (int i = 0; i < s.length(); i++) {
                 //if()
             }
-
+int result =0;
 
 
 

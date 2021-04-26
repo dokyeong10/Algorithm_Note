@@ -14,7 +14,6 @@ import java.util.StringTokenizer;
  * */
 public class BJ_7576_토마토_BFS {
     static int N, M, tomato[][];
-    static int visited[][];
 
     static int dr[] = {-1, 1, 0, 0};// 상하좌우
     static int dc[] = {0, 0, -1, 1};// 상하좌우
@@ -30,7 +29,7 @@ public class BJ_7576_토마토_BFS {
         N = Integer.parseInt(st.nextToken()); //행
 
         tomato = new int[N][M];
-        visited = new int[N][M];
+
         Queue<Point> q = new LinkedList<>();
 
         for (int i = 0; i < N; i++) {
@@ -43,7 +42,7 @@ public class BJ_7576_토마토_BFS {
                 }
             }
         }// 입력 받기 완료 //
-        int cnt = 0;
+
         int result = 0;
         while (!q.isEmpty()) {
             Point cur = q.poll();
@@ -55,9 +54,6 @@ public class BJ_7576_토마토_BFS {
                 nc = c + dc[d];
                 if (nr < 0 || nc < 0 || nr > N - 1 || nc > M - 1) continue;
                 if (tomato[nr][nc] == -1 || tomato[nr][nc] == 1) continue;
-                if (visited[nr][nc] > 0) continue;
-                cnt++;
-                visited[nr][nc] = cnt;
                 tomato[nr][nc] = tomato[r][c] + 1;
                 q.offer(new Point(nr, nc));
 

@@ -20,7 +20,7 @@ public class SWEA_1289_원재의메모리복구하기 {
                 //if()
             }
             int result = 0;
-            // ㅋㅓ밋
+            //하이하이
 
 
             sb.append("#").append(test_case).append(" ").append("");

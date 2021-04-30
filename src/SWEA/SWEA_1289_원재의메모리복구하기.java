@@ -15,15 +15,27 @@ public class SWEA_1289_원재의메모리복구하기 {
             for (int i = 0; i < s.length(); i++) {
                 bit[i] = s.charAt(i) - '0';
             } // 입력 후 쪼개기 완료 //
+            int cnt=0;
 
             for (int i = 0; i < s.length(); i++) {
-                //if()
+                if (bit[i] == 0) {
+                    continue;
+                }else{
+                    cnt++;
+                    for (int j = i; j <s.length() ; j++) {
+                        if(bit[j]==1){
+                            bit[j]=0;
+                        }else{
+                            bit[j]=1;
+                        }
+                    }
+                }
+
             }
-            int result = 0;
-            //하이하이
 
 
-            sb.append("#").append(test_case).append(" ").append("");
+
+            sb.append("#").append(test_case).append(" ").append(cnt).append('\n');
         } //end of tc
         System.out.println(sb);
 

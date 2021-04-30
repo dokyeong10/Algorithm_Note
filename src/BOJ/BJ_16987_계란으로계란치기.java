@@ -32,7 +32,7 @@ public class BJ_16987_계란으로계란치기 {
             return;
         }
 
-        if (egg[cur].hard <= 0) { //현재 들고 있는 계란 내구도가 0이하면
+        if (egg[cur].hard <= 0) { //현재 들고 있는 계란 내구도가 0 이하 라면
             dfs(cur + 1, cnt);
         } else {
             boolean flag = false;

@@ -14,7 +14,7 @@ public class BJ_2846_오르막길 {
         for (int i = 0; i < N; i++) {
             road[i] = sc.nextInt();
         }
-        int result = 0; // 결과값 커밋 222dsd
+        int result = 0; // 결과값 커밋 222commit commit
         int arr[] = new int[N];
         int k = 0;
         int max = 0;

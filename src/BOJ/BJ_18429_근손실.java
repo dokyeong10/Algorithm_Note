@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
  * 문제 접근
  * DFS 사용 , 순열 ( permutaiton ) 다 해보기
- * 3개 = > 3*2*1 => 6가지 다해보기
+ * 3개 = > 3*2*1 => 6가지 다해보기 ㅎ
  *
  * */
 public class BJ_18429_근손실 {

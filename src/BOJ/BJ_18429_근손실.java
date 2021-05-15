@@ -21,7 +21,7 @@ public class BJ_18429_근손실 {
 
         for (int i = 0; i < N; i++) {
             sport[i] = sc.nextInt();
-        } //  입력 받기 완료 ////
+        } //  입력 받기 완료 /////
 
         dfs(0, 0);
         System.out.println(result);

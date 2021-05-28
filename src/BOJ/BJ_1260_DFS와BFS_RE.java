@@ -37,7 +37,7 @@ public class BJ_1260_DFS와BFS_RE {
         System.out.println(sb);
 
 
-    } // end of main
+    } // end of main .
 
     private static void BFS(int current) {
         Queue<Integer>q = new LinkedList<>();

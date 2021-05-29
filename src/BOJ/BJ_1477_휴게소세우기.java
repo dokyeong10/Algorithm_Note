@@ -22,7 +22,7 @@ public class BJ_1477_휴게소세우기 {
         st = new StringTokenizer(br.readLine(), " ");
         for (int i = 1; i <= N; i++) {
             rest[i] = Integer.parseInt(st.nextToken());
-        } //// 휴게소의 위치 입력 받기 완료 ///////
+        } //// 휴게소의 위치 입력 받기 완료 ////////
 
         rest[0] = 0; //도로의 처음
         rest[N + 1] = L; //도로의 끝

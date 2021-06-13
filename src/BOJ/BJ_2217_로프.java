@@ -8,7 +8,7 @@ public class BJ_2217_로프 {
         int N =sc.nextInt();
         int rope[] =new int[N];
         for (int i = 0; i < N; i++) {
-            rope[i]=sc.nextInt(); //
+            rope[i]=sc.nextInt(); ///
         }
 
     } // end of main

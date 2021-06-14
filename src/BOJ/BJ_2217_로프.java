@@ -10,6 +10,7 @@ public class BJ_2217_로프 {
         for (int i = 0; i < N; i++) {
             rope[i]=sc.nextInt(); ///
         }
+        int a =0;
 
     } // end of main
 } // end of class

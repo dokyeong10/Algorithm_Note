@@ -25,8 +25,7 @@ public class BJ_1758_알바생강호 {
                 order++;
             }else {
                 result += (long)tip[i] - (order - 1);
-                order++;
-
+                order++; //
             }
         }
         System.out.println(result);

@@ -1,3 +1,5 @@
+package etc;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -6,9 +8,9 @@ interface Opponent {
 }
 
 
-public class Main {
+public class Main_사슴사냥대회 {
 
-    // DO NOT INCLUDE ANY FILES
+   // DO NOT INCLUDE ANY FILES
 // 아래 hunt메소드를 작성해서 제출하세요.
     static Opponent Me = new Opponent() {
         public int hunt(int opp, int turn, int opp_prev, int opp_last_pattern[][]) {

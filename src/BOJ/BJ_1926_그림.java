@@ -18,12 +18,10 @@ public class BJ_1926_그림 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         paper = new int[N][M];
         check = new boolean[N][M];
-
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < M; j++) {
@@ -37,7 +35,6 @@ public class BJ_1926_그림 {
                 }
             }
         }
-
         System.out.println(size);
         System.out.println(maxsize);
     } // end of main
@@ -68,12 +65,12 @@ public class BJ_1926_그림 {
 
     }
 } // end of class
-class Point {
-        int r, c;
 
-        public Point(int r, int c) {
-            this.r = r;
-            this.c = c;
-        }
+class Point {
+    int r, c;
+    public Point(int r, int c) {
+        this.r = r;
+        this.c = c;
     }
+}
 

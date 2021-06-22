@@ -36,7 +36,7 @@ public class BJ_16918_봄버맨_self {
                     else map[i][j]--; // 폭탄이었으면 -1 씩 해준다
                     if (map[i][j] == 0) { //0일때
                         q.offer(new Point(i, j)); // 큐에 저장
-                     }
+                    }
                 }
             }
             while (!q.isEmpty()) { // 4방향 + 자기자신 터트리기
@@ -53,6 +53,7 @@ public class BJ_16918_봄버맨_self {
                     map[nr][nc] = -1;
                 }
             }
+        } // end of time
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < R; i++) { // 결과 도출
                 for (int j = 0; j < C; j++) {
@@ -65,7 +66,7 @@ public class BJ_16918_봄버맨_self {
                 sb.append('\n');
             }
             System.out.println(sb);
-        } // end of time
+
     } // end of main
     static class Point {
         int r, c;

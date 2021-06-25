@@ -5,10 +5,6 @@
 <img src="https://img.shields.io/badge/Priority Queue-064f8c?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/BruteForce-199900?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/List-fece00?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/Greedy-ffa200?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/BackTracking-e10098?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/Graph-0078d4?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/Prim-36566f?style=flat-square&logo=&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Kruskal-b366f6?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/MST-f9ab00?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/Dijkstra-00b2ff?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/DP-003b57?style=flat-square&logo=&logoColor=white"/></a> <img src="https://img.shields.io/badge/BitMask-007722?style=flat-square&logo=&logoColor=white"/></a>
 
-#### BAEKJOON 
-
-[![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=ehrud2357)](https://solved.ac/ehrud2357)
-
 
 <h4>📆 21.01.27 ~ ing</h4>
 
@@ -16,4 +12,8 @@
 - 삼성 소프트웨어 아카데미 : https://swexpertacademy.com/main/main.do
 - 정올 : http://www.jungol.co.kr/
 - 프로그래머스 : https://programmers.co.kr/
+
+#### BAEKJOON 
+
+[![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=ehrud2357)](https://solved.ac/ehrud2357)
 

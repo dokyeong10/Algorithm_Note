@@ -6,7 +6,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 /*
- * DFS와 BFS로 출력하시오
+ * DFS와 BFS로 출력하시오 ,,
  *
  * */
 public class BJ_1260_DFS와BFS {

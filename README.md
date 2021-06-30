@@ -17,3 +17,4 @@
 
 [![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=ehrud2357)](https://solved.ac/ehrud2357)
 
+### hi 

@@ -11,7 +11,8 @@ import java.util.Scanner;
  * */
 public class BJ_1260_DFS와BFS {
     static int N, M, V;
-    static boolean arr[][];
+    static boolean arr[][]; // 배열
+
     static boolean visited[];
     static StringBuilder sb = new StringBuilder();
 

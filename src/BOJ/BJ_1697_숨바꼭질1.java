@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class BJ_1697_숨바꼭질1 {
 
     static int subin, sister;
-    static int map[]= new int[100001]; // 범위가 <=100000 이다
+    static int map[]= new int[100001]; /// 범위가 <=100000 이다
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

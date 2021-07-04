@@ -31,6 +31,6 @@ public class 오픈채팅방 {
             answer[i] = map.get(list.get(i)[0]) + list.get(i)[1];
         }
         return answer;
-        !sb.equals()
+
     }
 }

@@ -1,4 +1,4 @@
-package etc;
+package ETC1;
 
 import java.io.IOException;
 import java.util.*;

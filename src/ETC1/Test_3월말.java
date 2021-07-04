@@ -1,4 +1,4 @@
-package etc;
+package ETC1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

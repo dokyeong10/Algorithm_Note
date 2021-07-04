@@ -1,4 +1,4 @@
-package etc;
+package ETC1;
 
 import java.util.Arrays;
 import java.util.Scanner;

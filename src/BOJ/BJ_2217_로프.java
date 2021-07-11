@@ -2,7 +2,9 @@ package BOJ;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+/*
+* 문제 설명
+* */
 public class BJ_2217_로프 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

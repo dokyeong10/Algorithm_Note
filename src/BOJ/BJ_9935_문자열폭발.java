@@ -5,6 +5,7 @@ import java.io.*;
 
 public class BJ_9935_문자열폭발 {
     // stack 사용
+    //효율성 중요
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -38,4 +39,5 @@ public class BJ_9935_문자열폭발 {
 
 
     } // end of main
+    ///
 } // end of class

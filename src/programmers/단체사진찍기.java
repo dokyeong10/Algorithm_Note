@@ -1,4 +1,7 @@
 package programmers;
+//**
+/*순열
+* */
 
 public class 단체사진찍기 {
     static char arr[] = {'a', 'b', 'c', 'd'};

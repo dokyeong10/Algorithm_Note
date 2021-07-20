@@ -3,6 +3,7 @@ package BOJ;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -33,7 +34,6 @@ public class BJ_14502_연구소 {
         comb(0);
         System.out.println(max);
     } // end of main
-
     private static void comb(int num) {
         if (num == 3) {
             for (int i = 0; i < N; i++) {

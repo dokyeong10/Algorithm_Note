@@ -68,6 +68,7 @@ public class BJ_1926_그림 {
 
 class Point {
     int r, c;
+
     public Point(int r, int c) {
         this.r = r;
         this.c = c;

@@ -44,26 +44,28 @@ public class BJ_1713_후보추천하기 {
             }
         }
     }
-}// end of main
 
-class Student implements Comparable<Student> {
-    int num;
-    int total;
-    int time;
+    static class Student implements Comparable<Student> {
+        int num;
+        int total;
+        int time;
 
-    public Student(int num, int total, int time) {
-        this.num = num;
-        this.total = total;
-        this.time = time;
-    }
+        public Student(int num, int total, int time) {
+            this.num = num;
+            this.total = total;
+            this.time = time;
+        }
 
-    @Override
-    public int compareTo(Student o) {
-        if (this.total == o.total) {
-            return this.time - o.time;
-        } else if (this.total < o.total)
-            return -1;
-        else return 1;
-    }
+        @Override
+        public int compareTo(Student o) {
+            if (this.total == o.total) {
+                return this.time - o.time;
+            } else if (this.total < o.total)
+                return -1;
+            else return 1;
+        }
 
-} // end of class
+    } // end of main
+
+}// end of class
+

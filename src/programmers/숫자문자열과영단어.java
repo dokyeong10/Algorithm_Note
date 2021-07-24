@@ -1,4 +1,4 @@
-package ETC1;
+package programmers;
 
 import java.util.*;
 

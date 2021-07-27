@@ -29,4 +29,5 @@ public class 영어끝말잇기 {
         answer[1]=0;
         return answer;
     }
+
 }

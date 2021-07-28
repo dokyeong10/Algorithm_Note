@@ -22,6 +22,7 @@ public class 카카오프렌즈컬러링북 {
         cnt = 0;
         now = 0;
         max = 0;
+
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
                 pictures[i][j] = picture[i][j];

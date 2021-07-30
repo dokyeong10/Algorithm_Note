@@ -8,98 +8,79 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class BOJ_7569_토마토 {
-    static int M, N, map[][], H, max = -2;
-    static int dr[] = {-1, 1, 0, 0};
-    static int dc[] = {0, 0, -1, 1};
-    static int dh[] = {-1, 1};
-    static int check[][];
+    static int M, N, map[][][], H, max = -2, result;
+    static int dr[] = {0, 0, 0, 0, -1, 1};
+    static int dc[] = {0, 0, -1, 1, 0, 0};
+    static int dz[] = {-1, 1, 0, 0, 0, 0};
+    static int check[][][];
     static Queue<Point> q = new LinkedList<>();
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         M = Integer.parseInt(st.nextToken()); // 가로
         N = Integer.parseInt(st.nextToken()); // 세로
         H = Integer.parseInt(st.nextToken());// 높이
-        map = new int[N * H][M];
-        check = new int[N * H][M];
+        map = new int[H][N][M];
+        check = new int[H][N][M];
         boolean flag = false;
-        int result = -2;
-        int cnt = 0;
-        for (int i = 0; i < N * H; i++) {
-            st = new StringTokenizer(br.readLine(), " ");
-            for (int j = 0; j < M; j++) {
-                map[i][j] = Integer.parseInt(st.nextToken());
-                if (map[i][j] == 0) flag = true;
-                if (map[i][j] == -1) {
-                    check[i][j] = -1;
-                }
-                if (map[i][j] == 1 && check[i][j] == 0) {
-                    q.offer(new Point(i, j));
-                    check[i][j] = 1;
-
+        for (int w = 0; w < H; w++) {
+            for (int i = 0; i < N; i++) {
+                st = new StringTokenizer(br.readLine(), " ");
+                for (int j = 0; j < M; j++) {
+                    map[w][i][j] = Integer.parseInt(st.nextToken());
+                    if (map[w][i][j] == 1 && check[w][i][j] == 0) {
+                        check[w][i][j] = 1;
+                        q.offer(new Point(w, i, j));
+                    } else if (map[w][i][j] == 0) {
+                        flag = true;
+                    } else if (map[w][i][j] == -1) {
+                        check[w][i][j] = -1;
+                    }
                 }
             }
         }
         BFS();
-        for (int i = 0; i < N * H; i++) {
-            for (int j = 0; j < M; j++) {
-                System.out.print(check[i][j] + " ");
-                if (check[i][j] == 0) {
-                    result = -1;
-                    System.out.println(result);
-                    return;
+        for (int w = 0; w < H; w++) {
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < M; j++) {
+                    max = Math.max(max, check[w][i][j]);
+                    if (check[w][i][j] == 0) {
+                        System.out.println(-1);
+                        return;
+                    }
                 }
             }
-            System.out.println();
         }
-        System.out.println();
         if (!flag) {
-            result = 0;
+            System.out.println(0);
         } else {
-            result = max - 1;
+            System.out.println(max - 1);
         }
-        System.out.println(result);
-
-
     }// end of main
-
     private static void BFS() {
-        int r, c;
-
         while (!q.isEmpty()) {
             Point cur = q.poll();
-            r = cur.r;
-            c = cur.c;
-            int nr, nc, nh;
-            for (int d = 0; d < 4; d++) {
+            int z = cur.z;
+            int r = cur.r;
+            int c = cur.c;
+            int nr, nc, nz;
+            for (int d = 0; d < 6; d++) {
+                nz = z + dz[d];
                 nr = r + dr[d];
                 nc = c + dc[d];
-                if (nr < 0 || nc < 0 || nr > N * H - 1 || nc > M - 1) continue;
-                if (map[nr][nc] == -1 || map[nr][nc] == 1) continue;
-                if (check[nr][nc] > 0) continue;
-                check[nr][nc] = check[r][c] + 1;
-                max = Math.max(check[nr][nc], max);
-                q.offer(new Point(nr, nc));
+                if (nr < 0 || nc < 0 || nr > N - 1 || nc > M - 1 || nz < 0 || nz > H - 1) continue;
+                if (map[nz][nr][nc] == 1 || map[nz][nr][nc] == -1) continue;
+                if (check[nz][nr][nc] > 0) continue;
+                check[nz][nr][nc] = check[z][r][c] + 1;
+                q.offer(new Point(nz, nr, nc));
             }
-            for (int d = 0; d < 2; d++) {
-                nh = r + dh[d] * N;
-                if (nh < 0 || nh > N * H - 1) continue;
-                if (map[nh][c] == 1 || map[nh][c] == -1) continue;
-                if (check[nh][c] > 0) continue;
-                check[nh][c] = check[r][c] + 1;
-                max = Math.max(check[nh][c], max);
-                q.offer(new Point(nh, c));
-            }
-
-
         }
     }
+    static public class Point {
+        int z, r, c;
 
-    static class Point {
-        int r, c;
-
-        public Point(int r, int c) {
+        public Point(int z, int r, int c) {
+            this.z = z;
             this.r = r;
             this.c = c;
         }

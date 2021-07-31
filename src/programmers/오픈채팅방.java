@@ -26,6 +26,7 @@ public class 오픈채팅방 {
                 map.put(rel[1], rel[2]);
             }
         }
+
         String[] answer = new String[list.size()];
         for (int i = 0; i < list.size(); i++) {
             answer[i] = map.get(list.get(i)[0]) + list.get(i)[1];

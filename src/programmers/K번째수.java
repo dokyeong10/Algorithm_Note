@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class K번째수 {
+public class K번째수 { //k
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
         for (int i = 0; i < commands.length; i++) {

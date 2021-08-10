@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class 거리두기확인하기 { //거리 확인
+public class 거리두기확인하기 { //거리두기 확인하기
     public int[] solution(String[][] places) {
         int[] answer = new int[5];
         int dr[] = {-1, 1, 0, 0};

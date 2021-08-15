@@ -3,7 +3,7 @@ package programmers;
 import java.util.*;
 import java.io.*;
 
-class 신규아이디추천 { //신규 아이디 추천 추천
+class 신규아이디추천 { //신규 아이디 추천 추천 추천
     public String solution(String new_id) {
         String answer = "";
         StringBuilder sb = new StringBuilder(new_id.toLowerCase());

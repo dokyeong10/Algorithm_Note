@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class 기능개발 {
+public class 기능개발 { //기능 개발
     public int[] solution(int[] progresses, int[] speeds) {
 
         ArrayList<Integer> list = new ArrayList<>();

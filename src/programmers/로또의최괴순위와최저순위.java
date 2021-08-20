@@ -1,6 +1,6 @@
 package programmers;
 import java.util.*;
-public class 로또의최괴순위와최저순위 {
+public class 로또의최괴순위와최저순위 { //
     public int[] solution(int[] lottos, int[] win_nums) {
         int[] answer = new int [2];
         int zerocnt = 0;

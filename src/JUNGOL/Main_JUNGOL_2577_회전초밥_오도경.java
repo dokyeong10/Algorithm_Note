@@ -28,8 +28,6 @@ public class Main_JUNGOL_2577_회전초밥_오도경 {
         System.out.println(maxCnt);
         sc.close();
     }
-
-
     private static void start() {
         int eat = 0; // 먹었을 때 카운트
 

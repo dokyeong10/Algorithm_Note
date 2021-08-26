@@ -30,7 +30,6 @@ public class Solution_키순서1_BFS {
 
     }// end of main
 
-  //  private static void gtBFS(int )
 
 
 

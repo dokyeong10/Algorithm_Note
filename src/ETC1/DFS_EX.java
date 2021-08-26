@@ -15,7 +15,6 @@ public class DFS_EX {
         check = new boolean[5];
         comb(0, 0);
     }// end of main
-
     private static void comb(int num, int depth) {
         if (depth == pick) {
             for (int i = 0; i < pick; i++) {

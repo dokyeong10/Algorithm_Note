@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BJ_15649_N과M {
+public class BJ_15649_N과M { //조합
     static int N, M;
     static boolean check[];
     static int arr[];

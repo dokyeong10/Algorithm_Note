@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ_2468_안전영역 {
+public class BJ_2468_안전영역 { //BFS
     static int N;
     static int map[][];
     static int dr[] = {-1, 1, 0, 0};

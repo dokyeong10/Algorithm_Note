@@ -3,7 +3,7 @@ package programmers;
 import java.util.*;
 import java.io.*;
 
-public class 메뉴리뉴얼_2 {
+public class 메뉴리뉴얼_2 { //메뉴
     static HashMap<String, Integer> map;
     static int max;
 

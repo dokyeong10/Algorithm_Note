@@ -2,7 +2,7 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class BJ_9742_순열 {
+public class BJ_9742_순열 { //순열
     private static String s;
     static int N;
     static char sen[];

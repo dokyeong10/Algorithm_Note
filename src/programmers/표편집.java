@@ -1,6 +1,6 @@
 package programmers;
 import java.util.*;
-public class 표편집 {
+public class 표편집 { // 표 편집
     public String solution(int n, int k, String[] cmd) {
 
         int curnum = 0;

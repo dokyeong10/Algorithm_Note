@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class 타겟넘버 {
+public class 타겟넘버 { // DFS
     static int cnt, result;
 
     public int solution(int[] numbers, int target) {

@@ -1,6 +1,6 @@
 package programmers;
 import java.util.*;
-public class 영어끝말잇기 {
+public class 영어끝말잇기 { // 영어 끝말 잇기
     public int[] solution(int n, String[] words) {
         int[] answer = new int [2];
         int num=0; //누가 걸렸는지

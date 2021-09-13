@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class 모의고사 {
+public class 모의고사 { //모의 고사
     public int[] solution(int[] answers) {
         ArrayList<Integer> list = new ArrayList<>();
         int one[] = {1, 2, 3, 4, 5};

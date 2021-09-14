@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class 프린터 {
+public class 프린터 {// 프린터
     public int solution(int[] priorities, int location) {
         int answer = 0;
         int cnt = 1;

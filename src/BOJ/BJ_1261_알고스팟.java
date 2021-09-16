@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ_1261_알고스팟 {
+public class BJ_1261_알고스팟 { //알고 스팟
     static int N, M, map[][], cnt;
     static int dr[] = {-1, 1, 0, 0};
     static int dc[] = {0, 0, -1, 1};

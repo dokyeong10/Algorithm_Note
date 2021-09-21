@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class BJ_2667_단지번호붙이기 {
+public class BJ_2667_단지번호붙이기 { //단지번호 붙이기
     static int N, totalnum, num;
     static int apt[][];
     static int dr[] = {-1, 1, 0, 0};

@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ_2636_치즈 {
+public class BJ_2636_치즈 { //치즈
     static int N, M, cheese[][], cnt;
     static int dr[] = {-1, 1, 0, 0};
     static int dc[] = {0, 0, -1, 1};

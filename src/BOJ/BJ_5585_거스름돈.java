@@ -2,7 +2,7 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class BJ_5585_거스름돈 {
+public class BJ_5585_거스름돈 { //거스름돈
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int N =sc.nextInt();

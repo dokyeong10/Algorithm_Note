@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
 * 문제 설명
 * */
-public class BJ_2217_로프 {
+public class BJ_2217_로프 { //로프
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();

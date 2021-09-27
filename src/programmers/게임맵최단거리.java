@@ -3,7 +3,7 @@ package programmers;
 import java.util.*;
 
 public class 게임맵최단거리 {
-    public int solution(int[][] maps) {
+    public int solution(int[][] maps) {//게임맵 최단 거리
         int answer = 0;
         int n = maps.length;
         int m = maps[0].length;

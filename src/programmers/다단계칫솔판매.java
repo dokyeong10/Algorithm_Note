@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class 다단계칫솔판매 {
+public class 다단계칫솔판매 { //다단계 칫솔 판매
     static int cnt, max, result;
     static HashMap<String, String> map;
     static HashMap<String, Integer> map2;

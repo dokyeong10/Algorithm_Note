@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ_2458_키순서 {
+public class BJ_2458_키순서 { //키순서
     static int N,M,map[][];
     static int Max =100000;
 

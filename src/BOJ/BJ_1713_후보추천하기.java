@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class BJ_1713_후보추천하기 {
+public class BJ_1713_후보추천하기 { //후보 추천하기
     static int N, M;
     static int[] students;
 

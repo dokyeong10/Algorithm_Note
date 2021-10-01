@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class BJ_1697_숨바꼭질1 {
+public class BJ_1697_숨바꼭질1 { //숨바꼭질
 
     static int subin, sister;
     static int map[]= new int[100001]; /// 범위가 <=100000 이다

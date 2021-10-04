@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ_16918_봄버맨_self {
+public class BJ_16918_봄버맨_self { //봄버맨 re
 
     static int R, C, N, map[][];
     static Queue<Point> q = new LinkedList<>();

@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 * DFS로 연결
 * true로 표시 된 것들 -1 ( 1은 빼야함 )
 * */
-public class BJ_2606_바이러스 {
+public class BJ_2606_바이러스 { //바이러스
     static int com, M, cnt;
     static boolean visited[], arr[][];
     static StringBuilder sb = new StringBuilder();

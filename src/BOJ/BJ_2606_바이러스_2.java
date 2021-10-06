@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class BJ_2606_바이러스_2 {
+public class BJ_2606_바이러스_2 {//바이러스 2
     private static boolean[] check;
     private static ArrayList<Integer>[] com;
     static int N, l;

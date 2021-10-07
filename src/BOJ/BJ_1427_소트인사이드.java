@@ -3,7 +3,7 @@ package BOJ;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BJ_1427_소트인사이드 {
+public class BJ_1427_소트인사이드 { //소트인사이드
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

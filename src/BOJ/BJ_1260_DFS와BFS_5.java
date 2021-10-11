@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class BJ_1260_DFS와BFS_5 {
+public class BJ_1260_DFS와BFS_5 {// dfs bfs
     static int N, M, V;
     static ArrayList<Integer> arr[];
     static Queue<Point> q = new LinkedList<>();
